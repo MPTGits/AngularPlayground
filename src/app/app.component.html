@@ -1,6 +1,22 @@
-<h1>This is a test text</h1>
+<!-- <h1>This is a test text</h1>
 <div class="container">
     <div class="row">
-        <app-servers></app-servers>
+        <success-component></success-component>
+    </div>
+    <div class="row">
+        <failure-component></failure-component>
+    </div>
+</div>
+<div>
+    <inputs-component></inputs-component>
+</div> -->
+
+<app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+<div class="row">
+    <div class="col-xs-12">
+        <app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+    </div>
+    <div class="col-xs-12">
+        <app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>
     </div>
 </div>

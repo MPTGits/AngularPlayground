@@ -1,0 +1,9 @@
+<div>
+    <input type="text" [(ngModel)]="username">
+    <p>{{ username }}</p>
+    <button type="button"
+     [disabled]="isUsernameEmpty()"
+     (click)="resetUsername()">
+     Valid username
+    </button>
+</div>
